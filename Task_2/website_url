@@ -1,0 +1,13 @@
+https://storage.googleapis.com/cloudchallenge_website_bucket/index.html
+
+# Commands to:
+# create the bucket with the right permissions - so make it public:
+
+# First command to create a bucket:
+gcloud storage buckets create gs://cloudchallenge_website_bucket-fromcomman --location=EU --no-public-access-prevention --uniform-bucket-level-access
+
+# Secound command to add IAM - permissions of the bucket:
+gcloud storage buckets add-iam-policy-binding gs://cloudchallenge_website_bucket-fromcomman --member=allUsers --role=roles/storage.objectViewer
+
+# copy index.html to the bucket:
+ gcloud storage cp index.html gs://cloudchallenge_website_bucket-fromcomman
