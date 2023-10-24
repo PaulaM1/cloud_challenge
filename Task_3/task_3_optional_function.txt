@@ -1,0 +1,9 @@
+### Output from the Cloud Shell running function - hello_function.py:
+
+Hello from the other siiiiiiiiiide!
+Hello, it's me, Paula Mikszewicz
+6
+
+
+### Trigger url from created Cloud Function:
+https://europe-central2-cloudchallenge-401416.cloudfunctions.net/cloud_challenge_function
