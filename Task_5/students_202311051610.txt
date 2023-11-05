@@ -1,0 +1,8 @@
+|id |lastname  |firstname|email                 |city    |age|
+|---|----------|---------|----------------------|--------|---|
+|0  |Mikszewicz|Paula    |p.mikszewicz@gmail.com|Warszawa|27 |
+|1  |Kowalski  |Maciej   |m.kowalski@gmail.com  |Poznań  |26 |
+|2  |Michalska |Alicja   |a.michalska@gmail.com |Warszawa|29 |
+|3  |Dąbrowski |Jan      |j.dabrowski@gmail.com |Kraków  |30 |
+|4  |Więcek    |Magda    |m.wiecek@gmail.com    |Zamość  |22 |
+|5  |Borzdyński|Bartek   |b.borzdynski@gmail.com|Gdynia  |34 |
