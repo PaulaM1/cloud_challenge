@@ -1,0 +1,6 @@
+cloudchallenge-key.json
+index.html
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+

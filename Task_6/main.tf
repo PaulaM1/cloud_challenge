@@ -33,7 +33,7 @@ resource "google_compute_instance" "dareit-instance" {
     network = "default"
 
     access_config {
-      // Ephemeral public IP
+      // Ephemeral public IP address
     }
   }
 }

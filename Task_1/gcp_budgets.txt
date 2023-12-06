@@ -1,0 +1,23 @@
+# Command to create a budget in GCP:
+gcloud billing budgets create --billing-account=019EC7-794633-ECA61C --display-name="BUDGET_CloudChallenge" --budget-amount=1316.00PLN --threshold-rule=percent=0.50 --threshold-rule=percent=0.75,basis=forecasted-spend
+
+# Command to list all budgets using gcloud:
+gcloud billing budgets list --billing-account=019EC7-794633-ECA61C
+#Response:
+---
+amount:
+  specifiedAmount:
+    currencyCode: PLN
+    units: '1316'
+budgetFilter:
+  calendarPeriod: MONTH
+  creditTypesTreatment: INCLUDE_ALL_CREDITS
+displayName: BUDGET_CloudChallenge
+etag: '1696785456852303'
+name: billingAccounts/019EC7-794633-ECA61C/budgets/b18b4492-699c-4ca2-ae3c-bfac483a5dc9
+notificationsRule: {}
+thresholdRules:
+- spendBasis: CURRENT_SPEND
+  thresholdPercent: 0.5
+- spendBasis: FORECASTED_SPEND
+  thresholdPercent: 0.75
