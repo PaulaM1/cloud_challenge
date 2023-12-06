@@ -14,9 +14,10 @@ resource "google_storage_bucket" "dareit-bucket" {
 ###################  Compute Instance  ##############################
 
 resource "google_compute_instance" "dareit-instance" {
-  name         = "instance-dareit-cloud"
-  machine_type = "e2-small"
-  zone         = "europe-west1-b"
+  name                = "instance-dareit-cloud"
+  machine_type        = "e2-small"
+  zone                = "europe-west1-b"
+  deletion_protection = false
 
   tags = ["my-instance-challenge"]
 
@@ -24,7 +25,7 @@ resource "google_compute_instance" "dareit-instance" {
     initialize_params {
       image = "debian-cloud/debian-11"
       labels = {
-       managed_by_terraform = "true"
+        managed_by_terraform = "true"
       }
     }
   }
@@ -42,9 +43,10 @@ resource "google_compute_instance" "dareit-instance" {
 ###################  Cloud SQL instance  ##########################
 
 resource "google_sql_database_instance" "dareit-sql" {
-  name             = "dareit"
-  database_version = "POSTGRES_15"
-  region           = "europe-west1"
+  name                = "dareit"
+  database_version    = "POSTGRES_15"
+  region              = "europe-west1"
+  deletion_protection = false
 
   settings {
     tier = "db-f1-micro"
@@ -54,6 +56,6 @@ resource "google_sql_database_instance" "dareit-sql" {
 resource "google_sql_user" "users" {
   name     = "dareit-user"
   instance = google_sql_database_instance.dareit-sql.name
-#   host     = "me.com"
+  #   host     = "me.com"
   password = "userdareit1"
 }
